@@ -6,7 +6,6 @@ Created on Tue Jan  2 20:56:16 2024
 """
 
 import pandas as pd
-import numpy as np
 
 
              #Car sales  data
@@ -46,7 +45,7 @@ df = df.drop ( "Fuel_efficiency" , axis=1 )
 
 
 
-        # FONLSİYONLAR 
+        # FONKSİYONLAR 
         
         
 def beygir_filtre ():
