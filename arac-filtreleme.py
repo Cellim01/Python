@@ -126,7 +126,7 @@ while (True):
         
         hacim_filtre()
         
-    secim = int(input("Devame etmek istiyor musun ? (1/2/3/4, çıkmak için 0): "))
+    secim = int(input("Devam etmek istiyor musun ? ( 1-2-3-4, çıkmak için 0): "))
    
     if secim == 0:
         
