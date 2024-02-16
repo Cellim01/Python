@@ -15,10 +15,8 @@ mpDraw = mp.solutions.drawing_utils
 
 DrawSpec = mpDraw.DrawingSpec(thickness=1, circle_radius=1)
 
-# Önceki ağız durumu
 mouth_was_closed = False
 
-# Esneme sayısı
 Esneme_Sayısı = 0
 
 while True:
@@ -36,15 +34,15 @@ while True:
 
             mouth_landmarks = faceLm.landmark
             
-            upper_lip = (mouth_landmarks[13].y + mouth_landmarks[14].y) / 2
+            upper_lip = ( mouth_landmarks[13].y + mouth_landmarks[14].y ) / 2
             
             lower_lip = mouth_landmarks[17].y
 
             lip_distance = lower_lip - upper_lip
 
-            if lip_distance > 0.090:  # Eşik değeri, ağzın açıklığını belirlemek için ayarlanabilir
+            if lip_distance > 0.090 :  
                 
-                if not mouth_was_closed:  # Eğer önceki durum kapalıysa ve şu anki durum açıksa esneme tespit edildi
+                if not mouth_was_closed :  
                     
                     Esneme_Sayısı += 1
                 
@@ -54,7 +52,7 @@ while True:
                 
                 mouth_was_closed = False
 
-    cv2.putText(img, f"Esneme Sayisi: {Esneme_Sayısı}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+    cv2.putText(img, f"Esneme Sayisi: { Esneme_Sayısı }", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 255, 0), 2 )
 
     cv2.imshow("Video2", img)
 
