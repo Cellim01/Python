@@ -32,11 +32,11 @@ while True:
             
             mpDraw.draw_landmarks(img, faceLm, mpFacemesh.FACEMESH_CONTOURS, DrawSpec)
 
-            mouth_landmarks = faceLm.landmark
+            mouthLm = faceLm.landmark
             
-            upper_lip = ( mouth_landmarks[13].y + mouth_landmarks[14].y ) / 2
+            upper_lip = ( mouthLm[13].y + mouthLm[14].y ) / 2
             
-            lower_lip = mouth_landmarks[17].y
+            lower_lip = mouthLm[17].y
 
             lip_distance = lower_lip - upper_lip
 
