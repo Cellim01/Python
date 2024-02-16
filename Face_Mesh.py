@@ -5,7 +5,7 @@
 import cv2
 import mediapipe as mp
 
-video = cv2.VideoCapture("C:\\Users\\user\\Desktop\\Python OpenCV ile Sıfırdan Uzmanlığa Görüntü İşleme (Gİ-1)\\3_Görüntü İşleme Projeleri\\6_face_mesh\\video1.mp4")
+video = cv2.VideoCapture("C:\\Users\\user\\Desktop\\video1.mp4")
 
 mpFacemesh = mp.solutions.face_mesh
 
