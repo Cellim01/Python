@@ -17,7 +17,7 @@ DrawSpec = mpDraw.DrawingSpec(thickness=1, circle_radius=1)
 
 mouth_was_closed = False
 
-Esneme_Sayısı = 0
+Esneme_Sayisi = 0
 
 while True:
     
@@ -44,7 +44,7 @@ while True:
                 
                 if not mouth_was_closed :  
                     
-                    Esneme_Sayısı += 1
+                    Esneme_Sayisi += 1
                 
                 mouth_was_closed = True
             
@@ -52,7 +52,7 @@ while True:
                 
                 mouth_was_closed = False
 
-    cv2.putText(img, f"Esneme Sayisi: { Esneme_Sayısı }", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 255, 0), 2 )
+    cv2.putText(img, f"Esneme Sayisi: { Esneme_Sayisi }", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 255, 0), 2 )
 
     cv2.imshow("Video2", img)
 
